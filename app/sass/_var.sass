@@ -1,0 +1,155 @@
+.b-after
+	content: ""
+	position: absolute
+
+.b-thin
+	font-weight: 100
+.b-extralight
+	font-weight: 200
+.b-light
+	font-weight: 300
+.b-regular
+	font-weight: 400
+.b-medium
+	font-weight: 500
+.b-semibold
+	font-weight: 600
+.b-bold
+	font-weight: 700
+.b-extrabold
+	font-weight: 800
+.b-ultrabold
+	font-weight: 900
+
+
+$main-blue: #41719a
+$main-text: #292727
+
+$CondBold: "MyriadProCondBold"
+$Cond: "MyriadProCondRegular"
+$ProRegular: "MyriadProRegular"
+$ProSemi: "MyriadProSemiBold"
+
+
+=b-clear($clear: both)
+	clear: $clear
+=b-relative($relative: relative)
+	position: $relative
+=b-absolute($abs: absolute)
+	position: $abs 
+=b-static($static: static)
+	position: $static
+=b-fixed($fixed: fixed)
+	position: $fixed
+=b-pointer($cur: pointer)
+	cursor: $cur
+=b-block($block: block)
+	display: $block
+=b-ib($ib: inline-block)
+	display: $ib
+=b-underline($underline: underline)
+	text-decoration: $underline
+=b-nounderline($nound: none)
+	text-decoration: $nound
+=b-displaynoneY($dny: none)
+	display: $dny
+
+
+
+=b-flex($df: -webkit-box, $df2: -moz-box, $df3: -ms-flexbox, $df4: -webkit-flex, $df5: flex)
+	display: $df 
+	display: $df2
+	display: $df3
+	display: $df4
+	display: $df5
+
+=b-flex-align($align)
+	-ms-flex-align: $align
+	-webkit-align-items: $align
+	-webkit-box-align: $align
+	align-items: $align
+=b-flex-align-end($align1: end, $align2: flex-end)
+	-ms-flex-align: $align2
+	-webkit-align-items: $align2
+	-webkit-box-align: $align1
+	align-items: $align2
+=b-flex-direction($dir)
+	-ms-flex-direction: $dir
+	flex-direction: $dir
+	-webkit-box-orient: $dir
+
+=b-flex-column($dir: column, $dir2: vertical)
+	-ms-flex-direction: $dir
+	flex-direction: $dir
+	-webkit-box-orient: $dir2
+
+=b-rounded($radius) 
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	border-radius: $radius
+
+=b-opacity($opacity) 
+	opacity: $opacity
+
+=b-transition-duration($duration)
+	-moz-transition-duration: $duration
+	-webkit-transition-duration: $duration
+	-o-transition-duration: $duration
+	transition-duration: $duration
+
+=b-transform($arguments) 
+	-webkit-transform: $arguments
+	-moz-transform: $arguments
+	-o-transform: $arguments
+	-ms-transform: $arguments
+	transform: $arguments
+
+=b-rotation($deg)
+	+b-transform(rotate($deg))
+
+=b-box-shadow($arguments) 
+	-webkit-box-shadow: $arguments
+	-moz-box-shadow: $arguments
+	box-shadow: $arguments
+
+=b-fs($fontsize, $lineheight) 
+	font-size: $fontsize
+	line-height: $lineheight
+
+=b-ls($ls)
+	letter-spacing: ($ls/1000em)
+
+=b-uppercase($trans: uppercase)
+	text-transform: $trans
+
+=b-justify($just: justify, $just2: space-between)
+	-webkit-box-pack: $just
+	-moz-box-pack: $just
+	-ms-flex-pack: $just2
+	-webkit-justify-content: $just2
+	justify-content: $just2
+=b-unjustify($just: inherit)
+	-webkit-box-pack: $just
+	-moz-box-pack: $just
+	-ms-flex-pack: $just
+	-webkit-justify-content: $just
+	justify-content: $just
+=b-justify-around($just: space-around)
+	-webkit-box-pack: $just
+	-moz-box-pack: $just
+	-ms-flex-pack: $just
+	-webkit-justify-content: $just
+	justify-content: $just
+
+=b-wh($width: auto, $height: auto)
+	width: $width
+	height: $height
+
+.b-flex-container
+	+b-flex
+
+
+// safari **
+
+// flex-direction: column = -webkit-box-orient: vertical

@@ -1,0 +1,31 @@
+{
+  "name": "Starter-pack",
+  "description": "Gulp Project",
+  "main": "index.js",
+  "authors": [
+    "Alex one"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "html5shiv": "^3.7.3",
+    "magnific-popup": "^1.1.0",
+    "font-awesome": "^4.7.0",
+    "matchHeight": "^0.7.2",
+    "jquery": "^3.2.1",
+    "owl.carousel": "^2.2.1"
+  },
+  "devDependencies": {
+    "bootstrap-touchspin": "^3.1.2",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47"
+  }
+}
