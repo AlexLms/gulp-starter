@@ -1,5 +1,0 @@
-write in console:
-
-1) npm i
-2) bower i -p  // [install only Dev and not DevDep]
-3) gulp
