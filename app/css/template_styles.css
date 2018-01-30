@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "PTSans-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/PTSans-Regular/PTSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSans-Regular/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular/PTSans-Regular.ttf") format("truetype"), url("../fonts/PTSans-Regular/PTSans-Regular.svg#PTSans-Regular") format("svg"); }
+
+@font-face {
+  font-family: "PTSans-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/PTSans-Bold/PTSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSans-Bold/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold/PTSans-Bold.ttf") format("truetype"), url("../fonts/PTSans-Bold/PTSans-Bold.svg#PTSans-Bold") format("svg"); }
+
+@font-face {
+  font-family: "PFDinDisplayPro-regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/PFDinDisplayPro-regular/PFDinDisplayPro-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinDisplayPro-regular/PFDinDisplayPro-regular.woff") format("woff"), url("../fonts/PFDinDisplayPro-regular/PFDinDisplayPro-regular.ttf") format("truetype"), url("../fonts/PFDinDisplayPro-regular/PFDinDisplayPro-regular.svg#PFDinDisplayPro-regular") format("svg"); }
+
+@font-face {
+  font-family: "PFDinDisplayPro-light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/PFDinDisplayPro-light/PFDinDisplayPro-light.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinDisplayPro-light/PFDinDisplayPro-light.woff") format("woff"), url("../fonts/PFDinDisplayPro-light/PFDinDisplayPro-light.ttf") format("truetype"), url("../fonts/PFDinDisplayPro-light/PFDinDisplayPro-light.svg#PFDinDisplayPro-light") format("svg"); }
+
+@font-face {
+  font-family: "PFDinDisplayPro-italic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/PFDinDisplayPro-italic/PFDinDisplayPro-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinDisplayPro-italic/PFDinDisplayPro-italic.woff") format("woff"), url("../fonts/PFDinDisplayPro-italic/PFDinDisplayPro-italic.ttf") format("truetype"), url("../fonts/PFDinDisplayPro-italic/PFDinDisplayPro-italic.svg#PFDinDisplayPro-italic") format("svg"); }
+
+@font-face {
+  font-family: "PFDinDisplayPro-bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/PFDinDisplayPro-bold/PFDinDisplayPro-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinDisplayPro-bold/PFDinDisplayPro-bold.woff") format("woff"), url("../fonts/PFDinDisplayPro-bold/PFDinDisplayPro-bold.ttf") format("truetype"), url("../fonts/PFDinDisplayPro-bold/PFDinDisplayPro-bold.svg#PFDinDisplayPro-bold") format("svg"); }
+
+@font-face {
+  font-family: "Intro";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Intro/Intro.eot?#iefix") format("embedded-opentype"), url("../fonts/Intro/Intro.woff") format("woff"), url("../fonts/Intro/Intro.ttf") format("truetype"), url("../fonts/Intro/Intro.svg#Intro") format("svg"); }
+
+.b-clearfix:before, .b-clearfix:after {
+  content: " ";
+  display: table; }
+
+.b-clearfix:after {
+  clear: both; }
+
+.b-justify {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; }
+
+.b-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.b-clearfix:before, .b-clearfix:after {
+  content: " ";
+  display: table; }
+
+.b-clearfix:after {
+  clear: both; }
+
+.b-justify {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; }
+
+.b-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+h1, h2, h3, h4, h5, h6, p {
+  line-height: normal;
+  margin: 0; }
+
+body {
+  margin: 0; }
+
+ul {
+  padding: 0px;
+  margin: 0px; }
+
+/*svg надо задавать height*/
+.icon {
+  width: 50px;
+  height: 50px; }
+  .icon * {
+    fill: red; }
+
+/*# sourceMappingURL=app.css/template_styles.css.map */

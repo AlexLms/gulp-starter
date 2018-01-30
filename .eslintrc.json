@@ -1,0 +1,6 @@
+{
+  "extends": "kupibilet",
+  "env": {
+    "jquery": true
+  }
+}

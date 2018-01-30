@@ -1,63 +1,47 @@
-.b-after
-	content: ""
-	position: absolute
-
-.b-thin
-	font-weight: 100
-.b-extralight
-	font-weight: 200
-.b-light
-	font-weight: 300
-.b-regular
-	font-weight: 400
-.b-medium
-	font-weight: 500
-.b-semibold
-	font-weight: 600
-.b-bold
-	font-weight: 700
-.b-extrabold
-	font-weight: 800
-.b-ultrabold
-	font-weight: 900
-
-
-$main-blue: #41719a
-$main-text: #292727
-
-$CondBold: "MyriadProCondBold"
-$Cond: "MyriadProCondRegular"
-$ProRegular: "MyriadProRegular"
-$ProSemi: "MyriadProSemiBold"
-
-
+.b-clearfix
+	&:before, &:after
+		content: " "
+		display: table
+	&:after
+		clear: both
 =b-clear($clear: both)
 	clear: $clear
+
 =b-relative($relative: relative)
 	position: $relative
+
 =b-absolute($abs: absolute)
-	position: $abs 
+	position: $abs
+
 =b-static($static: static)
 	position: $static
+
 =b-fixed($fixed: fixed)
 	position: $fixed
+
 =b-pointer($cur: pointer)
 	cursor: $cur
+
 =b-block($block: block)
 	display: $block
+
 =b-ib($ib: inline-block)
 	display: $ib
+
 =b-underline($underline: underline)
 	text-decoration: $underline
+
 =b-nounderline($nound: none)
 	text-decoration: $nound
+
 =b-displaynoneY($dny: none)
 	display: $dny
 
 
 
+
 =b-flex($df: -webkit-box, $df2: -moz-box, $df3: -ms-flexbox, $df4: -webkit-flex, $df5: flex)
-	display: $df 
+	display: $df
 	display: $df2
 	display: $df3
 	display: $df4
@@ -68,28 +52,31 @@ $ProSemi: "MyriadProSemiBold"
 	-webkit-align-items: $align
 	-webkit-box-align: $align
 	align-items: $align
+
 =b-flex-align-end($align1: end, $align2: flex-end)
 	-ms-flex-align: $align2
 	-webkit-align-items: $align2
 	-webkit-box-align: $align1
 	align-items: $align2
+
 =b-flex-direction($dir)
 	-ms-flex-direction: $dir
 	flex-direction: $dir
 	-webkit-box-orient: $dir
+	-webkit-flex-direction: $dir
 
 =b-flex-column($dir: column, $dir2: vertical)
 	-ms-flex-direction: $dir
 	flex-direction: $dir
 	-webkit-box-orient: $dir2
 
-=b-rounded($radius) 
+=b-rounded($radius)
 	-webkit-border-radius: $radius
 	-moz-border-radius: $radius
 	-ms-border-radius: $radius
 	border-radius: $radius
 
-=b-opacity($opacity) 
+=b-opacity($opacity)
 	opacity: $opacity
 
 =b-transition-duration($duration)
@@ -98,7 +85,14 @@ $ProSemi: "MyriadProSemiBold"
 	-o-transition-duration: $duration
 	transition-duration: $duration
 
-=b-transform($arguments) 
+=b-transition($transition)
+	-webkit-transition: $transition
+	-moz-transition: $transition
+	-ms-transition: $transition
+	-o-transition: $transition
+	transition: $transition
+
+=b-transform($arguments)
 	-webkit-transform: $arguments
 	-moz-transform: $arguments
 	-o-transform: $arguments
@@ -108,12 +102,13 @@ $ProSemi: "MyriadProSemiBold"
 =b-rotation($deg)
 	+b-transform(rotate($deg))
 
-=b-box-shadow($arguments) 
+=b-box-shadow($arguments)
 	-webkit-box-shadow: $arguments
 	-moz-box-shadow: $arguments
+	-o-box-shadow: $arguments
 	box-shadow: $arguments
 
-=b-fs($fontsize, $lineheight) 
+=b-fs($fontsize, $lineheight)
 	font-size: $fontsize
 	line-height: $lineheight
 
@@ -129,26 +124,62 @@ $ProSemi: "MyriadProSemiBold"
 	-ms-flex-pack: $just2
 	-webkit-justify-content: $just2
 	justify-content: $just2
+.b-justify
+	-webkit-box-pack: justify
+	-moz-box-pack: justify
+	-ms-flex-pack: space-between
+	-webkit-justify-content: space-between
+	justify-content: space-between
 =b-unjustify($just: inherit)
 	-webkit-box-pack: $just
 	-moz-box-pack: $just
 	-ms-flex-pack: $just
 	-webkit-justify-content: $just
 	justify-content: $just
+
 =b-justify-around($just: space-around)
 	-webkit-box-pack: $just
 	-moz-box-pack: $just
 	-ms-flex-pack: $just
 	-webkit-justify-content: $just
 	justify-content: $just
+=b-justify-end($just: flex-end, $just2: end)
+	-webkit-box-pack: $just2
+	-moz-box-pack: $just
+	-ms-flex-pack: $just
+	-webkit-justify-content: $just
+	justify-content: $just
+=b-justify-center($just: center)
+	-webkit-box-pack: $just
+	-moz-box-pack: $just
+	-ms-flex-pack: $just
+	-webkit-justify-content: $just
+	justify-content: $just
 
+
+
+.b-flex
+	+b-flex
+=b-flex-wrap($event: wrap)
+	flex-wrap: $event
+	-webkit-flex-wrap: $event
 =b-wh($width: auto, $height: auto)
 	width: $width
 	height: $height
+=b-bg-gradient($default, $args)
+	background: $default
+	background: -webkit-gradient($args)
+	background: -webkit-linear-gradient($args)
+	background: -moz-linear-gradient($args)
+	background: -o-linear-gradient($args)
+	background: linear-gradient($args)
 
-.b-flex-container
-	+b-flex
-
+	// background: $
+	// background: -webkit-gradient()
+	// background: -webkit-linear-gradient()
+	// background: -moz-linear-gradient()
+	// background: -o-linear-gradient()
+	// background: linear-gradient()
 
 // safari **
 

@@ -1,14 +1,19 @@
 @import "bourbon/_bourbon.scss"
 @import "_fonts.sass"
-@import "_var.sass"
-// @import "../libs/magnific-popup/dist/magnific-popup"
+@import "_base.sass"
 
+h1, h2, h3, h4, h5, h6, p
+  line-height: normal
+  margin: 0
+body
+	margin: 0
+ul
+	padding: 0px
+	margin: 0px
 
-
-
-
-
-
-		
-
-
+/*svg надо задавать height*/
+.icon
+	width: 50px 
+	height: 50px
+	& *
+		fill: red
