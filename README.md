@@ -3,4 +3,4 @@
 + npm i
 + gulp
 
-*now you an write your code*
+*now you can write your code*
