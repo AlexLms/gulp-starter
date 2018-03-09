@@ -41,7 +41,7 @@ This will connect your new page with your [base page config](https://github.com/
 
 # Sass files structure
 
-Do __NOT__ write your css code at [css folder](https://github.com/AlexLasagna/gulp-starter/tree/master/app/css) because when you run your app again `gulp` this files will be overwritten.
+Do __NOT__ write your css code at [css folder](https://github.com/AlexLasagna/gulp-starter/tree/master/app/css) because when you run your app again(`gulp`) this files will be overwritten.
 
 - [Bourbon](https://www.bourbon.io/docs/latest/) is Sass mixin library that helps to simplify life.
 - Files with an underscore in the title won't compile.
