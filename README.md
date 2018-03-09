@@ -8,7 +8,7 @@ Fast builder for your static page projects (not SPA).
 
 2) Install gulp dependencies via npm `npm i` or yarn `yarn install`.
 
-3) Install libs you may need (jquery + htmlshiw) - `bower i`.
+3) Install libs you may need (jquery + html5shiv) - `bower i`.
 
 4) Start your web server `gulp`.
 
