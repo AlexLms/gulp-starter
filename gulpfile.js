@@ -1,9 +1,8 @@
-const gulp      	 = require('gulp'),
+const gulp     = require('gulp'),
 	sass         = require('gulp-sass'),
 	pug          = require('gulp-pug'),
 	sourcemaps   = require('gulp-sourcemaps'),
 	browserSync  = require('browser-sync'),
-	concat       = require('gulp-concat'),
 	uglify       = require('gulp-uglifyjs'),
 	cssnano      = require('gulp-cssnano'),
 	rename       = require('gulp-rename'),
@@ -14,10 +13,11 @@ const gulp      	 = require('gulp'),
 	pngquant     = require('imagemin-pngquant'),
 	cache        = require('gulp-cache'),
 	svgmin 			 = require('gulp-svgmin'),
-	svgstore 		 = require('gulp-svgstore'),
+	svgstore     = require('gulp-svgstore'),
 	babel 			 = require('gulp-babel'),
 	ext_replace = require('gulp-ext-replace'),
 	autoprefixer = require('gulp-autoprefixer');
+
 
 
  // compile our sass
@@ -32,6 +32,19 @@ gulp.task('sass', () => {
 		.pipe(browserSync.reload({stream: true}))
 });
 
+// sass minify
+gulp.task('sass-manify', () => {
+	return gulp.src('app/sass/**/*.sass')
+		.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+		.pipe(sass())
+		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+		.pipe(cssnano())
+		.pipe(rename({suffix: '.min'}))
+		.pipe(gulp.dest('app/css'))
+		.pipe(browserSync.reload({stream: true}))
+});
+
+// compile es6 to es5 with babel and minify
 gulp.task('es6', () => {
 	return gulp.src('app/js/common.es6.js')
 	.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
@@ -40,41 +53,29 @@ gulp.task('es6', () => {
 	}))
 	.pipe(ext_replace('.js', '.es6.js'))
 	.pipe(rename({suffix: '.es5'}))
+	.pipe(uglify())
 	.pipe(gulp.dest('app/js'))
 });
 
-/* compile our pug */
+// compile our pug
 gulp.task('pug', () => {
-    return gulp.src(['app/pug/*.pug', '!app/pug/*.ajax.pug'])
-    	.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-      .pipe(pug({pretty: true}))
-      .pipe(gulp.dest('app'))
-      .pipe(browserSync.reload({stream: true}))
+		return gulp.src(['app/pug/*.pug', '!app/pug/*.ajax.pug'])
+			.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+			.pipe(pug({pretty: true}))
+			.pipe(gulp.dest('app'))
+			.pipe(browserSync.reload({stream: true}))
 });
+
+// compile our ajax(pug)
 gulp.task('pug-ajax', () => {
-    return gulp.src('app/pug/ajax/*.ajax.pug')
-    	.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-      .pipe(pug({pretty: true}))
-      .pipe(gulp.dest('app/ajax'))
-      .pipe(browserSync.reload({stream: true}))
-});
-gulp.task('svgstore', () => {
-	return gulp.src('app/img/svg/*.svg')
-	.pipe(svgmin())
-	.pipe(svgstore())
-	.pipe(rename({basename: 'sprite'}))
-	.pipe(gulp.dest('./app/img/'))
+		return gulp.src('app/pug/ajax/*.ajax.pug')
+			.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+			.pipe(pug({pretty: true}))
+			.pipe(gulp.dest('app/ajax'))
+			.pipe(browserSync.reload({stream: true}))
 });
 
-/* manify our css */
-
-gulp.task('css-manify', ['sass'], () => {
-	return gulp.src(['app/css/**/*.css', '!app/css/**/*.min.css', '!app/css/app.css'])
-		.pipe(cssnano())
-		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest('app/css'));
-});
-/* make img size smaller */
+// make img size smaller
 gulp.task('img', () => {
 	return gulp.src('app/img/**/*')
 		.pipe(cache(imagemin({
@@ -86,7 +87,7 @@ gulp.task('img', () => {
 		.pipe(gulp.dest('dist/img'));
 });
 
-/* online watch for changings */
+// watch for changings
 gulp.task('browser-sync', () => {
 	browserSync({
 		server: {
@@ -96,17 +97,18 @@ gulp.task('browser-sync', () => {
 	});
 });
 
-/* just simple watch taks */
-
-gulp.task('watch', ['browser-sync', 'sass', 'css-manify', 'es6'], () => {
+// watch taks
+gulp.task('watch', ['browser-sync', 'sass', 'sass-manify', 'es6'], () => {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
+	gulp.watch('app/sass/**/*.sass', ['sass-manify']);
 	gulp.watch('app/js/common.es6.js', ['es6']);
 	gulp.watch('app/pug/**/*.pug', ['pug']);
 	gulp.watch('app/pug/**/*.ajax.pug', ['pug-ajax']);
 	gulp.watch('app/*.html', browserSync.reload);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
 });
-/* delete our old production folder */
+
+// delete our old production folder
 gulp.task('clean', () => {
 	return del.sync('dist');
 });
@@ -115,7 +117,7 @@ gulp.task('clear', () => {
 })
 
 /* build production */
-gulp.task('build', ['clean', 'img', 'sass'], () => {
+gulp.task('build', ['clean', 'img', 'sass', 'sass-manify'], () => {
 
 	const buildCss = gulp.src([
 		'app/css/template_styles.css',
@@ -141,13 +143,20 @@ gulp.task('build', ['clean', 'img', 'sass'], () => {
 
 });
 
-
 /* default task */
 gulp.task('default', ['watch', 'pug', 'pug-ajax', 'es6']);
 
-// gulp.task('del-min', function(){
-// 	return gulp.src('app/optimized/**')
-// 		.pipe(ext_replace('.jpg', '-min.jpg'))
-// 		.pipe(gulp.dest('app/without'))
-// });
 
+// usefull tasks
+gulp.task('del-min', function(){
+	return gulp.src('app/optimized/**')
+		.pipe(ext_replace('.jpg', '-min.jpg'))
+		.pipe(gulp.dest('app/without'))
+});
+gulp.task('svgstore', () => {
+	return gulp.src('app/img/svg/*.svg')
+	.pipe(svgmin())
+	.pipe(svgstore())
+	.pipe(rename({basename: 'sprite'}))
+	.pipe(gulp.dest('./app/img/'))
+});

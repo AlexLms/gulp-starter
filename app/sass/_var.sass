@@ -117,19 +117,12 @@
 
 =b-uppercase($trans: uppercase)
 	text-transform: $trans
-
 =b-justify($just: justify, $just2: space-between)
 	-webkit-box-pack: $just
 	-moz-box-pack: $just
 	-ms-flex-pack: $just2
 	-webkit-justify-content: $just2
 	justify-content: $just2
-.b-justify
-	-webkit-box-pack: justify
-	-moz-box-pack: justify
-	-ms-flex-pack: space-between
-	-webkit-justify-content: space-between
-	justify-content: space-between
 =b-unjustify($just: inherit)
 	-webkit-box-pack: $just
 	-moz-box-pack: $just
@@ -155,11 +148,6 @@
 	-ms-flex-pack: $just
 	-webkit-justify-content: $just
 	justify-content: $just
-
-
-
-.b-flex
-	+b-flex
 =b-flex-wrap($event: wrap)
 	flex-wrap: $event
 	-webkit-flex-wrap: $event
@@ -174,12 +162,15 @@
 	background: -o-linear-gradient($args)
 	background: linear-gradient($args)
 
-	// background: $
-	// background: -webkit-gradient()
-	// background: -webkit-linear-gradient()
-	// background: -moz-linear-gradient()
-	// background: -o-linear-gradient()
-	// background: linear-gradient()
+
+.b-justify
+	-webkit-box-pack: justify
+	-moz-box-pack: justify
+	-ms-flex-pack: space-between
+	-webkit-justify-content: space-between
+	justify-content: space-between
+.b-flex
+	+b-flex
 
 // safari **
 

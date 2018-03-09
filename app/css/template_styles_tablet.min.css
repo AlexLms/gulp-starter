@@ -1,1 +1,1 @@
-.b-clearfix:after,.b-clearfix:before{content:" ";display:table}.b-clearfix:after{clear:both}.b-justify{-webkit-box-pack:justify;-ms-flex-pack:space-between;justify-content:space-between}.b-flex{display:-webkit-box;display:-ms-flexbox;display:flex}
+.b-clearfix:after,.b-clearfix:before{content:" ";display:table}.b-clearfix:after{clear:both}.b-justify{-ms-flex-pack:space-between;justify-content:space-between}.b-flex{display:-ms-flexbox;display:flex}
