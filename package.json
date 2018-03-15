@@ -4,7 +4,7 @@
   "description": "Gulp Project",
   "main": "gulpfile.js",
   "scripts": {
-    "build": "babel app/js -d dista --presets es2015"
+    "build": ""
   },
   "author": "Alex one",
   "license": "ISC",
