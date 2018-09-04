@@ -1,6 +1,11 @@
 {
-  "extends": "kupibilet",
+  "extends": "airbnb",
   "env": {
-    "jquery": true
+    "jquery": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "func-names": ["error", "never"]
   }
 }
