@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "PTSans-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/PTSans-Regular/PTSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSans-Regular/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular/PTSans-Regular.ttf") format("truetype"), url("../fonts/PTSans-Regular/PTSans-Regular.svg#PTSans-Regular") format("svg"); }
+
+@font-face {
+  font-family: "PTSans-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/PTSans-Bold/PTSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSans-Bold/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold/PTSans-Bold.ttf") format("truetype"), url("../fonts/PTSans-Bold/PTSans-Bold.svg#PTSans-Bold") format("svg"); }
+
+.b-clearfix:before, .b-clearfix:after {
+  content: " ";
+  display: table; }
+
+.b-clearfix:after {
+  clear: both; }
+
+.b-justify {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; }
+
+.b-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.b-clearfix:before, .b-clearfix:after {
+  content: " ";
+  display: table; }
+
+.b-clearfix:after {
+  clear: both; }
+
+.b-justify {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; }
+
+.b-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+/*# sourceMappingURL=app.css/template_styles_desktop.css.map */
