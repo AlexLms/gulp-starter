@@ -7,7 +7,8 @@ Use the convenience of Gulp along with All JavaScript features using Webpack
 
 1) Install Gulp and Webpack dependencies via npm `npm i` or yarn `yarn install`.
 
-2) If you need to install the library like [lodash](https://lodash.com/) install it via npm and just do an import in the js file. There is no need to include it in the html file.
+2) If you need to install the library like [lodash](https://lodash.com/) install it via npm and just do an import in the js file.
+There is no need to include it in the html file.
 
 3) Start your web server `npm start`.
 
