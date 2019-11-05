@@ -22,11 +22,16 @@ Use the convenience of [Gulp](https://gulpjs.com/) along with All JavaScript fea
 
 # Location of stuff
 
-- Your compiled [css files](https://github.com/AlexLasagna/gulp-starter/tree/master/app/css).
-- Your compiled [js files](https://github.com/AlexLasagna/gulp-starter/tree/master/app/js).
-- Your compiled [html files](https://github.com/AlexLasagna/gulp-starter/tree/master/app).
-- Your [sass files](https://github.com/AlexLasagna/gulp-starter/tree/master/app/sass).
-- Your [pug files](https://github.com/AlexLasagna/gulp-starter/tree/master/app/pug).
+    .
+    ├── app/                    # App folder with all developer stuff
+    │   ├── css/                # Compiled css from sass (don't write code here)
+    │   ├── js/                 # Webpack js entry, map files, final bundle
+    │   ├── sass/               # Sass files + bourbon
+    │   ├── pug/                # Pug files
+    │   └── html                # Compiled html from pug (don't write code here)
+    ├── webpack.config.js       # all webpack settings
+    ├── gulpfile.js             # all gulp settings
+    └── ...
 
 # Pug files structure
 
