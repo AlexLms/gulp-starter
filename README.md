@@ -3,7 +3,7 @@
 Fast builder for your static page projects.
 
 <p>
-	<img src="https://readmeimgs-xfeminxlzo.now.sh/gulp.png" alt="Gulp starter pack">
+	<img src="https://readmeimgs-rxzwiczcsi.now.sh/gulp.png" alt="Gulp starter pack">
 </p>
 
 
