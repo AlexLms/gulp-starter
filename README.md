@@ -1,26 +1,32 @@
-# Gulp 4 with Webpack 4 [sass, pug, es6, babel 7]
+# Gulp 4 with Webpack 4
 
 Fast builder for your static page projects.
-Use the convenience of Gulp along with All JavaScript features using Webpack
+
+<p>
+	<img src="https://readmeimgs-xfeminxlzo.now.sh/gulp.png" alt="Gulp starter pack">
+</p>
+
+
+Use the convenience of [Gulp](https://gulpjs.com/) along with All JavaScript features using [Webpack](https://webpack.js.org/)
+
 
 # Installation
 
 1) Install Gulp and Webpack dependencies via npm `npm i` or yarn `yarn install`.
 
-2) If you need to install the library like [lodash](https://lodash.com/) install it via npm and just do an import in the js file.
-There is no need to include it in the html file.
+2) If you need to install the library like [lodash](https://lodash.com/) install it via npm/yarn and just do an import in the js file. There is no need to include it in the html file.
 
-3) Start your web server `npm start`.
+3) Start your web server by `npm start`.
 
 4) Write your code.
 
 # Location of stuff
 
 - Your compiled [css files](https://github.com/AlexLasagna/gulp-starter/tree/master/app/css).
-- Your compiled [es6 js files](https://github.com/AlexLasagna/gulp-starter/tree/master/app/js).
+- Your compiled [js files](https://github.com/AlexLasagna/gulp-starter/tree/master/app/js).
 - Your compiled [html files](https://github.com/AlexLasagna/gulp-starter/tree/master/app).
-- [All sass files](https://github.com/AlexLasagna/gulp-starter/tree/master/app/sass).
-- [All pug files](https://github.com/AlexLasagna/gulp-starter/tree/master/app/pug).
+- Your [sass files](https://github.com/AlexLasagna/gulp-starter/tree/master/app/sass).
+- Your [pug files](https://github.com/AlexLasagna/gulp-starter/tree/master/app/pug).
 
 # Pug files structure
 
@@ -50,4 +56,8 @@ Do __NOT__ write your css code at [css folder](https://github.com/AlexLasagna/gu
 
 # Build production
 
-To build a production version of your app you need to type `npm run build` in a console. This will create dist folder where everything will be compressed and minified.
+To build a production version of your app you need to type:
+
+`npm run build`
+
+This will start the gulp and webpack build processes and then create dist folder where everything will be compressed, minified and perfect.
