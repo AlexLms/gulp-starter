@@ -29,8 +29,8 @@ Use the convenience of [Gulp](https://gulpjs.com/) along with All JavaScript fea
     │   ├── sass/               # Sass files + bourbon
     │   ├── pug/                # Pug files
     │   └── html                # Compiled html from pug (don't write code here)
-    ├── webpack.config.js       # all webpack settings
-    ├── gulpfile.js             # all gulp settings
+    ├── webpack.config.js       # All webpack settings
+    ├── gulpfile.js             # All gulp settings
     └── ...
 
 # Pug files structure
