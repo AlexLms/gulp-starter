@@ -28,7 +28,8 @@ Use the convenience of [Gulp](https://gulpjs.com/) along with All JavaScript fea
     │   ├── js/                 # Webpack js entry, map files, final bundle
     │   ├── sass/               # Sass files + bourbon
     │   ├── pug/                # Pug files
-    │   └── html                # Compiled html from pug (don't write code here)
+    │   ├── html                # Compiled html from pug (don't write code here)
+    │   └── ...
     ├── webpack.config.js       # All webpack settings
     ├── gulpfile.js             # All gulp settings
     └── ...
